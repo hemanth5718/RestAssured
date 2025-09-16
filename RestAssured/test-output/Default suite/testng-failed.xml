@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CrudWithBDD.Delete">
+      <class name="ResponseValidation.VerifyResponseBodyViaJsonPath">
         <methods>
-          <include name="deleteTest"/>
+          <include name="verifyBody"/>
         </methods>
-      </class> <!-- CrudWithBDD.Delete -->
+      </class> <!-- ResponseValidation.VerifyResponseBodyViaJsonPath -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

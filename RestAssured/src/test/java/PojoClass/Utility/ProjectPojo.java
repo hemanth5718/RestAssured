@@ -2,10 +2,10 @@ package PojoClass.Utility;
 
 public class ProjectPojo {
 	
-	String projectName;
-	String status;
-	String createdBy;
-	int teamSize;
+	private String projectName;
+	private String status;
+	private String createdBy;
+	private int teamSize;
 	
 	public ProjectPojo() {
 		

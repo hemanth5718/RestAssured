@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-18T12:42:07 IST" name="Default suite" finished-at="2025-09-18T12:42:10 IST" duration-ms="2832">
+  <suite started-at="2025-09-18T16:25:51 IST" name="Default suite" finished-at="2025-09-18T16:25:53 IST" duration-ms="1367">
     <groups>
     </groups>
-    <test started-at="2025-09-18T12:42:07 IST" name="Default test" finished-at="2025-09-18T12:42:10 IST" duration-ms="2832">
-      <class name="Pratice.PostViaHashmap">
-        <test-method signature="postViaHashmap()[pri:0, instance:Pratice.PostViaHashmap@16ec5519]" started-at="2025-09-18T12:42:07 IST" name="postViaHashmap" finished-at="2025-09-18T12:42:10 IST" duration-ms="2785" status="PASS">
+    <test started-at="2025-09-18T16:25:51 IST" name="Default test" finished-at="2025-09-18T16:25:53 IST" duration-ms="1367">
+      <class name="TypesOfParameter.ParamParam">
+        <test-method signature="samepleTest()[pri:0, instance:TypesOfParameter.ParamParam@16ec5519]" started-at="2025-09-18T16:25:51 IST" name="samepleTest" finished-at="2025-09-18T16:25:53 IST" duration-ms="1316" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postViaHashmap -->
-      </class> <!-- Pratice.PostViaHashmap -->
+        </test-method> <!-- samepleTest -->
+      </class> <!-- TypesOfParameter.ParamParam -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

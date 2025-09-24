@@ -1,4 +1,4 @@
-package crm.generic.fileutility;
+package genericUtility;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,7 +12,7 @@ public class ExcelUtility {
 	public String getDataFromExcel(String sheetName,int rowNum,int celNum) throws Throwable
 	{
 		
-		FileInputStream fis = new FileInputStream("./testData/RestAssuredTestData.xlsx");
+		FileInputStream fis = new FileInputStream("./testData/testData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 		wb.close();
@@ -21,7 +21,7 @@ public class ExcelUtility {
 	}
 	
 	public int getLastRowCount(String sheetName) throws Throwable {
-		FileInputStream fis = new FileInputStream("./testData/RestAssuredTestData.xlsx");
+		FileInputStream fis = new FileInputStream("./testData/testData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		int rowcount = wb.getSheet(sheetName).getLastRowNum();
 		wb.close();
@@ -30,7 +30,7 @@ public class ExcelUtility {
 	
 	public void setDataIntoExcel(String sheetName,int rowNum,int celNum) throws Throwable
 	{
-		FileInputStream fis = new FileInputStream("./testData/RestAssuredTestData.xlsx");
+		FileInputStream fis = new FileInputStream("./testdata/testData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		wb.getSheet(sheetName).getRow(rowNum).createCell(celNum);
 		FileOutputStream fos = new FileOutputStream("./testdata/testData.xlsx");

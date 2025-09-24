@@ -5,7 +5,7 @@ import static io.restassured.RestAssured.given;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import crm.generic.fileutility.ExcelUtility;
+import genericUtility.ExcelUtility;
 import io.restassured.http.ContentType;
 
 public class AddMultupleProjectUsingExcelTest {

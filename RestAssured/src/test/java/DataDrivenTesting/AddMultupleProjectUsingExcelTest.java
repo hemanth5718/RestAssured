@@ -5,9 +5,10 @@ import static io.restassured.RestAssured.given;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import crm.generic.fileutility.ExcelUtility;
 import io.restassured.http.ContentType;
 
-public class AddMultupleProjectTest {
+public class AddMultupleProjectUsingExcelTest {
 	@Test(dataProvider = "getData")
 	public void sampleTest(String pName, String status) {
 		
@@ -26,16 +27,16 @@ public class AddMultupleProjectTest {
 		.log().all();
 	}
 	@DataProvider
-	public Object[][] getData() {
-		Object[][] objarr = new Object[3][2];
-		objarr[0][0] = "AirMandya_1";
-		objarr[0][1] = "Created";
+	public Object[][] getData() throws Throwable {
+		ExcelUtility elib = new ExcelUtility();
+		int count = elib.getLastRowCount("Sheet1");
+		Object[][] objarr = new Object[count][2];
 		
-		objarr[1][0] = "AirMandya_2";
-		objarr[1][1] = "Created";
+		for(int i=0; i<count; i++) {
+			objarr[i][0]= elib.getDataFromExcel("Sheet1", i+1, 0);
+			objarr[i][1]= elib.getDataFromExcel("Sheet1", i+1, 1);
+		}
 		
-		objarr[2][0] = "AirMandya_3";
-		objarr[2][1] = "Created";
 		return objarr;
 	}
 	

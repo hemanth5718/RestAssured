@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RequestChaining.Scenario1DeleteProject">
+      <class name="DataDrivenTesting.AddMultupleProjectTest">
         <methods>
-          <include name="postDataToServer"/>
+          <include name="sampleTest" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- RequestChaining.Scenario1DeleteProject -->
+      </class> <!-- DataDrivenTesting.AddMultupleProjectTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DataDrivenTesting.AddMultupleProjectTest">
+      <class name="Miscelanious.SSLCertification">
         <methods>
-          <include name="sampleTest" invocation-numbers="0 1 2"/>
+          <include name="sslCertification"/>
         </methods>
-      </class> <!-- DataDrivenTesting.AddMultupleProjectTest -->
+      </class> <!-- Miscelanious.SSLCertification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

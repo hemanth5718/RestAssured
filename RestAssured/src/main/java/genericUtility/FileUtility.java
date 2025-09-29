@@ -7,7 +7,7 @@ public class FileUtility {
 
 	public String getDataFromPropertiesFile(String key) throws Throwable
 	{
-		FileInputStream fis = new FileInputStream(".config_env_data/configEnvData.properties");
+		FileInputStream fis = new FileInputStream("./config_env_data/configEnvData.properties");
 		 Properties p = new Properties();
 		 p.load(fis);
 		 String data = p.getProperty(key);

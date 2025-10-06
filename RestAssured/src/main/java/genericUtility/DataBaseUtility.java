@@ -46,26 +46,27 @@ public class DataBaseUtility {
 		return result;
 
 	}
-	
-	public static String executeQueryVerifyAndGetData(String query,int columnIndex,String expectedData) throws Throwable {
+
+	public static String executeQueryVerifyAndGetData(String query, int columnIndex, String expectedData)
+			throws Throwable {
 		ResultSet result = null;
-		boolean flag= false;
-			try {
-				result=con.createStatement().executeQuery(query);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-				
-		while(result.next()) {
-			if(result.getString(columnIndex).equals(expectedData)) {
-				flag=true;
+		boolean flag = false;
+		try {
+			result = con.createStatement().executeQuery(query);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		while (result.next()) {
+			if (result.getString(columnIndex).equals(expectedData)) {
+				flag = true;
 				break;
 			}
 		}
 		if (flag) {
 			System.out.println(expectedData + "==> data verified in data base table");
 			return expectedData;
-		}else {
+		} else {
 			System.out.println(expectedData + "==> data not verified in data base table");
 			return expectedData;
 		}

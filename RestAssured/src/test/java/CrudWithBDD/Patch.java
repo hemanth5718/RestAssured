@@ -13,8 +13,7 @@ public class Patch {
 	public void patchTest() {
 		
 		JSONObject jsonObj = new JSONObject();
-		
-		
+				
 		jsonObj.put("projectName", "samsung_13");
 		
 		given()

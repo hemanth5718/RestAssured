@@ -19,8 +19,6 @@ class NFSGame implements Serializable{
 		
 }
 
-
-
 public class Run1_ser {
 	public static void main(String[] args) throws Throwable {
 		NFSGame userObj = new NFSGame("hemanth", 10, 50000, 2);

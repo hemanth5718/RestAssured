@@ -27,7 +27,6 @@ public class JSONSchemaValidation {
 		.post("http://49.249.28.218:8091/addProject");
 		resp.then().log().all();
 		resp.then().body(JsonSchemaValidator.matchesJsonSchema(new File("./config_env_data/jsonSchema.json")));
-		
 		resp.then().body("msg", Matchers.instanceOf(String.class));
 	}
 

@@ -12,20 +12,16 @@ import org.testng.annotations.Test;
 
 import com.mysql.cj.jdbc.Driver;
 
+import BaseApiClass.BaseApiClass;
 import PojoClass.Utility.ProjectPojo;
-import genericUtility.DataBaseUtility;
-import genericUtility.FileUtility;
-import genericUtility.JavaUtility;
-import io.restassured.http.ContentType;
+import endPoints.IEndPoint;
 import io.restassured.response.Response;
 
-public class ProjectTest {
+public class ProjectTest extends BaseApiClass {
 	
-	JavaUtility jlib = new JavaUtility();
-	FileUtility flib= new FileUtility();
-	DataBaseUtility dlib = new DataBaseUtility();
 	ProjectPojo pObj;
 	String BaseUrl;
+	
 	@Test
 	public void addSingleprojectWithCreatedTest() throws Throwable
 	{
@@ -40,15 +36,15 @@ public class ProjectTest {
 		
 		//verify the projectName in API 
 		Response resp=  given()
-						.contentType(ContentType.JSON)
+						.spec(specReqObj)
 						.body(pObj)
 						.when()
-						.post(BaseUrl+"/addProject");
+						.post(IEndPoint.ADDproj);
 		
 				resp.then()
 				.assertThat().statusCode(201)
-				.assertThat().contentType(ContentType.JSON)
 				.assertThat().time(Matchers.lessThan(3000L))
+				.spec(SpecResObj)
 				.log().all();
 				
 				String actMsg = resp.jsonPath().getString("msg");
@@ -75,18 +71,20 @@ public class ProjectTest {
 	@Test(dependsOnMethods = "addSingleprojectWithCreatedTest")
 	public void createDuplicateProjectTest() throws Throwable {
 		  given()
-				.contentType(ContentType.JSON)
+				.spec(specReqObj)
 				.body(pObj)
 				.when()
-				.post(BaseUrl+"/addProject")
+				.post(IEndPoint.ADDproj)
 				.then()
 		.assertThat().statusCode(409)
-		.assertThat().contentType(ContentType.JSON)
 		.assertThat().time(Matchers.lessThan(3000L))
+		.spec(SpecResObj)
 		.log().all();
 	
 		
 	}
+	
+
 }
 
 

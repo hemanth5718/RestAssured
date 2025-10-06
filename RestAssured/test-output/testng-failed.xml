@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Miscelanious.SSLCertification">
+      <class name="com.ninza.hrm.api.employetest.ProjectTest">
         <methods>
-          <include name="sslCertification"/>
+          <include name="addSingleprojectWithCreatedTest"/>
+          <include name="configBS"/>
+          <include name="configAS"/>
         </methods>
-      </class> <!-- Miscelanious.SSLCertification -->
+      </class> <!-- com.ninza.hrm.api.employetest.ProjectTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

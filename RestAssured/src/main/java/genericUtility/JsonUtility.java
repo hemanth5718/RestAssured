@@ -1,7 +1,5 @@
 package genericUtility;
 
-import static io.restassured.RestAssured.given;
-
 import java.util.List;
 
 import com.jayway.jsonpath.JsonPath;
@@ -15,9 +13,6 @@ public class JsonUtility {
 		return list.get(0).toString();
 	}
 	
-	public String getDataOnXmlPath(Response resp, String xmlXpath) {
-		return resp.xmlPath().getString(xmlXpath);
-	}
 	
 	public boolean verifyDataOnJsonPath(Response resp,String jsonXpath,String expectedData) {
 		List<String> list = JsonPath.read(resp.asString(), jsonXpath);
@@ -35,28 +30,5 @@ public class JsonUtility {
 		return flag;
 	}
 	
-	public String getAcessToken() {
-		Response resp = given()
-						.formParam("client_id", "")
-						.formParam("client_secret", "")
-						.formParam("grant_type", "")
-						.when()
-						.post("");
-						resp.then()
-						.log().all();
-						String token = resp.jsonPath().get("access_token");
-						return token;
-	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

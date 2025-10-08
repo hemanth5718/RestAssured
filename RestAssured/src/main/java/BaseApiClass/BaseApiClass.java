@@ -24,10 +24,10 @@ public class BaseApiClass {
 	{
 		dlib.getDBconnection();
 		System.out.println("=======connect to DB======");
-		RequestSpecBuilder builder = new RequestSpecBuilder();
-		builder.setContentType(ContentType.JSON);
-		builder.setBaseUri(flib.getDataFromPropertiesFile("BASEUri"));
-		  specReqObj = builder.build();
+		RequestSpecBuilder reqBuilder = new RequestSpecBuilder();
+		reqBuilder.setContentType(ContentType.JSON);
+		reqBuilder.setBaseUri(flib.getDataFromPropertiesFile("BASEUri"));
+		  specReqObj = reqBuilder.build();
 		  
 		  ResponseSpecBuilder resBuilder= new ResponseSpecBuilder();
 		  resBuilder.expectContentType(ContentType.JSON);

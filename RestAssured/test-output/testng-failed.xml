@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ninza.hrm.api.employetest.ProjectTest">
+      <class name="mock.restfullBooker">
         <methods>
-          <include name="addSingleprojectWithCreatedTest"/>
-          <include name="configBS"/>
-          <include name="configAS"/>
+          <include name="partialUpdate"/>
         </methods>
-      </class> <!-- com.ninza.hrm.api.employetest.ProjectTest -->
+      </class> <!-- mock.restfullBooker -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

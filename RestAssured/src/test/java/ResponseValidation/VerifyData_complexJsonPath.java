@@ -26,10 +26,11 @@ public class VerifyData_complexJsonPath {
 	for(String data: list) {
 		System.out.println(data);
 	}
-	List<String> list1	=JsonPath.read(resp.asString(),".content[*].[?(@.projectName=='Ninja8650')].projectId");
+	List<String> list1	=JsonPath.read(resp.asString(),".content[*].[?(@.projectName=='gamma1353')].projectId");
 	String actualResult = list1.get(0);
+	System.out.println(actualResult);
 
-	Assert.assertEquals(actualResult, "NH_PROJ_222");
+	Assert.assertEquals(actualResult, "NH_PROJ_468");
 	
 	//extract firstProjectID
 	

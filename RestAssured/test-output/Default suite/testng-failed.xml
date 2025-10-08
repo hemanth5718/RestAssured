@@ -6,6 +6,7 @@
       <class name="mock.restfullBooker">
         <methods>
           <include name="partialUpdate"/>
+          <include name="create"/>
         </methods>
       </class> <!-- mock.restfullBooker -->
     </classes>
